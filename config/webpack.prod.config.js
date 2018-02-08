@@ -15,9 +15,9 @@ devConfig.entry = [
   "../src/index.js",
 ]
 
-devConfig.output.libraryTarget = 'commonjs2';
+devConfig.output.libraryTarget = 'umd';
 
-devConfig.target = 'node';
+// devConfig.target = 'node';
 
 devConfig.externals = nodeModules;
 

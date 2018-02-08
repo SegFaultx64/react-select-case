@@ -8,14 +8,12 @@ module.exports = {
     'webpack-hot-middleware/client?reload=true'
   ],
   resolve: {
-    root: [path.join(__dirname, '..', "node_modules")]
+    modules: [
+      path.join(__dirname, '..', "node_modules"),
+      'node_modules',
+    ],
   },
   context: __dirname + "/../src",
-
-  devtool: 'eval',
-  // We are watching in the gulp.watch, so tell webpack not to watch
-  watch: false,
-  // watchDelay: 300,
   output: {
     path: path.join(__dirname, '..', 'lib'),
     filename: 'bundle.js',
